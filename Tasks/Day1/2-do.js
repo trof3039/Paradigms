@@ -1,5 +1,6 @@
 'use strict';
 
+
 function Do (data) {
   const fns = []
 
@@ -26,6 +27,8 @@ function Do2 (data, fns = []) {
     run: () => fns.length ? fns.reduce((acc, fn) => fn(acc), data) : undefined
   }
 }
+
+// Put implementation here in class syntax
 
 Do({ id: 15 })
   .bind(({ id }) => ({ id, name: 'marcus', age: 42 }))
